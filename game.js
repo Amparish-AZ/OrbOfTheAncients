@@ -1,0 +1,1 @@
+// game.js placeholder - you can add full logic here

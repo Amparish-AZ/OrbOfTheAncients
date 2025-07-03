@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Orb of the Ancients</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="menuScreen" class="screen active">
+    <h1>Orb of the Ancients</h1>
+    <button onclick="goToDifficulty()">Start Game</button>
+  </div>
+  <div id="difficultyScreen" class="screen">
+    <h2>Select Difficulty</h2>
+    <button onclick="startGame('normal')">Normal</button>
+    <button onclick="startGame('nightmare')">Nightmare</button>
+    <button onclick="startGame('hell')">Hell</button>
+    <button onclick="goToMenu()">Back</button>
+  </div>
+  <div id="gameScreen" class="screen">
+    <div class="hud-top">
+      <span id="levelLabel"></span>
+      <span id="shotCounter">Shots: 30</span>
+    </div>
+    <canvas id="gameCanvas" width="480" height="640"></canvas>
+    <div class="hud">
+      <button onclick="goToMenu()">Quit</button>
+    </div>
+    <div id="victoryMessage" class="victory-msg">Victory!</div>
+  </div>
+  <script src="levels.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
